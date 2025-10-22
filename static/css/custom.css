@@ -1,0 +1,38 @@
+/* Hide the query builder - https://discuss.logseq.com/t/hiding-the-query-builder/20571 */
+.cp__query-builder-filter {
+  opacity: 0;
+  margin-top: -30px; /* Apply negative margin to bring it up */
+  transition: opacity 0.3s, margin-top 0.3s; /* Add transitions for smooth effect */
+}
+
+.custom-query:hover .cp__query-builder-filter {
+  opacity: 1;
+  margin-top: 0; /* Reset margin to its original value */
+}
+
+.cp__query-builder {
+  height: 0;
+  overflow: hidden;
+}
+
+.ls-block .custom-query>.th {
+  margin-bottom:0;
+}
+
+.custom-query>.th:hover + .cp__query-builder {
+  height: auto ;
+}
+
+/* Minimze the whitespace around the query header and to compact tables */
+/* Compact tables */
+.whitespace-nowrap {
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  padding-left: 1px;
+}
+/* Compcts live query header */
+.custom-query > div:first-child {
+    border-radius: 5px;
+    padding: 2px 2px;
+}
